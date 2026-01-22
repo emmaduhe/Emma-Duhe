@@ -1,1 +1,11 @@
 /* Place CSS styles here */
+body {
+    background-color: hsl(330, 75%, 73%);
+    font-size: 25px;
+    color: blanchedalmond;
+}
+
+h1 {
+    font-size: 55px;
+    color: aliceblue;
+}
