@@ -3,11 +3,18 @@ body {
     background-color: aliceblue;
     font-size: 25px;
     color: #7491ab;
+    margin: 40px;
 }
 
 h1 {
     font-size: 55px;
-    color: #ffebcd;
+    color: #7491ab;
     margin: 40px;
     text-align: center;
+}
+
+img {
+    width: 400;
+    margin-left: auto;
+    margin-right: auto;
 }
