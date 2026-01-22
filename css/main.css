@@ -1,12 +1,13 @@
 /* Place CSS styles here */
 body {
-    background-color: hwb(337 58% 7%);
+    background-color: aliceblue;
     font-size: 25px;
-    color: #ffebcd;
+    color: rgb(116, 145, 171);
 }
 
 h1 {
     font-size: 55px;
     color: #ffebcd;
-    margin: 70px;
+    margin: 40px;
+    text-align: center;
 }
