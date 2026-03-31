@@ -1,20 +1,4 @@
 /* Place CSS styles here */
-body {
-    background-color: aliceblue;
-    font-size: 25px;
-    color: #7491ab;
-    margin: 40px;
-}
-
-h1 {
-    font-size: 40.45px;
-    color: #7491ab;
-    margin: 40px;
-    text-align: center;
-}
-
-img {
-    width: 400;
-    margin-left: auto;
-    margin-right: auto;
+.body {
+    background-color: rgb(255, 155, 186);
 }
