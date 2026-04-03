@@ -6,33 +6,78 @@ html, body {
   background: #dff4ff;
 }
 
-#scene {
+/* --- Navbar styling --- */
+#top-bar {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1366px;        /* fixed scene width */
-  height: 768px;        /* fixed scene height */
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #ffb9e3;
+  border-bottom: 8px solid #d36ba6;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;  
+  align-items: left;  
+  padding: 0 20px;
+  box-sizing: border-box;
+  flex-direction: column;  
+}
+
+/* Navbar inner container ensures content scales */
+.navbar-content {
+  width: 100%;
+  max-width: 1400px; 
+  text-align: center;
+}
+
+/* --- Title --- */
+#top-bar h1 {
+  font-family: 'Gill Sans', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 2.5vw, 32px); 
+  color: white;
+  margin: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.2;
+  word-wrap: break-word; 
+}
+
+/* --- Subtitle --- */
+#top-bar h2 {
+  font-family: 'Gill Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(14px, 1.8vw, 18px); 
+  color: #d75ca6;
+  margin: 5px 0 0 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.2;
+  word-wrap: break-word; 
 }
 
 /* --- All background PNG layers --- */
 #scene > div > img {
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 
-/* --- Clouds --- */
+/* --- Clouds responsive scaling --- */
 #cloud1, #cloud2 {
   position: absolute;
   top: 50px;
-  width: 800px;          /* bigger size for visibility */
+  left: 0;
+  width: 800px;    
   height: auto;
-  z-index: 25;           /* behind trees */
+  z-index: 25;
+  transform-origin: left top; 
+  transform: scale(calc(1 + (100vw - 1366px)/1366)); 
 }
 
 #cloud1 img, #cloud2 img {
@@ -57,22 +102,63 @@ html, body {
 
 #frog {
   position: absolute;
-  width: 120px;     /* fixed size in px */
-  height: auto;     /* keep aspect ratio */
-  z-index: 39;      /* just above objects like lilypads/rocks/bushes/trees */
+  width: 90px;   
+  height: auto; 
+  z-index: 39;  
   cursor: pointer;
   transition: transform 0.5s ease, z-index 0.3s ease;
-  top: 530px;
-  left: 800px;
+  top: 40px;
+  left: 860px;
 }
 
 #ladybug {
   position: absolute;
-  width: 120px;     /* fixed size in px */
-  height: auto;     /* keep aspect ratio */
-  z-index: 39;      /* just above objects like lilypads/rocks/bushes/trees */
+  width: 90px; 
+  height: auto; 
+  z-index: 39; 
   cursor: pointer;
   transition: transform 0.5s ease, z-index 0.3s ease;
-  top: 0px;
-  left: 0px;
+  top: 28px;
+  left: 1000px;
 }
+
+#dragonfly {
+  position: absolute;
+  width: 90px;  
+  height: auto;  
+  z-index: 39;  
+  cursor: pointer;
+  transition: transform 0.5s ease, z-index 0.3s ease;
+  top: 32px;
+  left: 1150px;
+}
+
+#butterfly {
+  position: absolute;
+  width: 120px; 
+  height: auto; 
+  z-index: 39; 
+  cursor: pointer;
+  transition: transform 0.5s ease, z-index 0.3s ease;
+  top: 32px;
+  left: 1280px;
+}
+
+#L-body {
+  transform: translateY(-15px);
+}
+
+#frog svg,
+#ladybug svg,
+#dragonfly svg,
+#butterfly svg {
+  overflow: visible;
+}
+
+#frog,
+#ladybug,
+#dragonfly,
+#butterfly {
+  overflow: visible;
+}
+
