@@ -86,20 +86,6 @@ html, body {
   display: block;
 }
 
-/* --- Objects creatures hide behind --- */
-#rocks, #bushes, #trees, #lilypads {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#rocks { z-index: 35; }
-#bushes { z-index: 36; }
-#trees { z-index: 37; }
-#lilypads { z-index: 38; }
-
 #frog {
   position: absolute;
   width: 90px;   
